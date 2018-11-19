@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		var automobile = new Automobile();
+		
+		automobile.MyExtMethod(); 
+		automobile.Drive();
+	
+		
+	}
+}
+
+sealed class Automobile
+{
+	public void Drive()
+	{
+		Console.WriteLine("The truck is driving");
+	}
+	
+}
+
+static class AutomobileExtension
+{
+	public static void MyExtMethod(this Automobile auto)
+	{
+		Console.Write("We Wrote and extension method"+ Environment.NewLine);		
+	}
+	
+}
